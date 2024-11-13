@@ -6,6 +6,8 @@ use App\Http\Controllers\HelloController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\VendorController;
 use App\Http\Controllers\RequestController;
+use App\Http\Controllers\ResponseController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +35,5 @@ Route::get('/vendors/{id}', [VendorController::class, 'show']);
 Route::get('/requests/create', [RequestController::class, 'create']);
 
 Route::get('/requests/confirm', [RequestController::class, 'confirm'])->name('requests.confirm');
+
+Route::get('/response', [RequestController::class, 'index']);
