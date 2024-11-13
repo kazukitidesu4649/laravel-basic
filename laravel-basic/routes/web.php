@@ -36,4 +36,4 @@ Route::get('/requests/create', [RequestController::class, 'create']);
 
 Route::get('/requests/confirm', [RequestController::class, 'confirm'])->name('requests.confirm');
 
-Route::get('/response', [RequestController::class, 'index']);
+Route::get('/responses', [ResponseController::class, 'index']);
