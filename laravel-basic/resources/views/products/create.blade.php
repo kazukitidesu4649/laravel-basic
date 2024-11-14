@@ -39,7 +39,7 @@
                   <th>仕入先コード</th>
                   <td>
                       <select name="vendor_code">
-                          <option selected value=""><選択してください/option>
+                          <option selected value=""><選択してください</option>
                           @foreach ($vendor_codes as $vendor_code)
                               <option value="{{ $vendor_code }}">{{ $vendor_code }}</option>
                           @endforeach
