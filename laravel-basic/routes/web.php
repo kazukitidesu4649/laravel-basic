@@ -27,7 +27,12 @@ Route::get('/hello', [HelloController::class, 'index']);
 
 Route::get('/products', [ProductController::class, 'index']);
 
+Route::get('/products/create', [ProductController::class, 'create']);
+
+Route::post('/products/store', [ProductController::class, 'store'])->name('products.store');
+
 Route::get('/products/{id}', [ProductController::class, 'show']);
+
 Route::get('vendors/create',[VendorController::class, 'create']);
 
 Route::post('/vendors/store',[VendorController::class, 'store'])->name('vendors.store');
