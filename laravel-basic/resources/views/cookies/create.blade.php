@@ -21,7 +21,7 @@
 
     <form action="{{ route('cookies.store') }}" method="POST">
         @csrf
-        <select name="product">
+        <select name="product_id">
             <option disabled selected value="">選択してください</option>
             @foreach ($products as $product)
                 <option value="{{ $product->id }}">{{ $product->product_name }}</option>
