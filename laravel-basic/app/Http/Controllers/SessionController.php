@@ -13,16 +13,16 @@ class SessionController extends Controller
         $product_id = session(('product_id'));
         // $product_idに対応するレコードをproductsテーブルから取得する
         $product = Product::find($product_id);
-        // Bladeテンプレート(view/session/create.blade.php)にproductsを渡す
-        return view('session.create', compact('products'));
+        // Bladeテンプレート(view/session/index.blade.php)にproductsを渡す
+        return view('sessions.index', compact('product'));
     }
 
     public function create() {
         // productsテーブルの全てのデータを$productsに格納
         $products = Product::all();
 
-        //Bladeテンプレート(view/session/create.blade.php)にproductsを渡す
-        return view('session.create', compact('products'));
+        //Bladeテンプレート(view/sessions/create.blade.php)にproductsを渡す
+        return view('sessions.create', compact('products'));
     }
 
     // HTTPリクエストをstoreメソッドを使いデータベースに保存する
