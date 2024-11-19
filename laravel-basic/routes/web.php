@@ -7,6 +7,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\VendorController;
 use App\Http\Controllers\RequestController;
 use App\Http\Controllers\ResponseController;
+use App\Http\Controllers\SignInController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,3 +45,7 @@ Route::get('/requests/create', [RequestController::class, 'create']);
 Route::get('/requests/confirm', [RequestController::class, 'confirm'])->name('requests.confirm');
 
 Route::get('/responses', [ResponseController::class, 'index']);
+
+Route::get('/sign-in',[SignInController::class, 'create']);
+
+Route::post('/sign-in', [SignInController::class, 'store'])->name('sign-in.store');
