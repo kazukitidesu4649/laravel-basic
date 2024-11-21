@@ -15,12 +15,16 @@ class ProductAddedEvent
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
+    // $productプロパティを定義する
+    public $product;
+
     /**
      * Create a new event instance.
      */
-    public function __construct()
+    public function __construct(Product $product)
     {
-        //
+        // インスタンス化時に渡されたProductインスタンスを自身の$productプロパティに代入する
+        $this->product = $product;
     }
 
     /**
