@@ -39,6 +39,15 @@ class ProductController extends Controller
         $product->product_name = $request->input('product_name');
         $product->price = $request->input('price');
         $product->vendor_code = $request->input('vendor_code');
+
+        // if文を使い、ファームの内容にファイルがあれば、
+        if($request->hasFile('image')) {
+            //$iamge_pathにファイルパスを代入する。storage/app/public/productsフォルダに保存。
+            $image_path = $request->file('image')->store('public/products');
+            // ファイルパスからファイル名のみを取得し、Productインスタンスのimage_nameプロパティに代入する。
+            $product->image_name = basename($image_path);
+        }
+
         $product->save();
 
         // リダイレクトさせる
