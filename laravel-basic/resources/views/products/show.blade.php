@@ -28,7 +28,13 @@
          <tr>
              <th>更新日時</th>
              <td>{{ $product->updated_at }}</td>
-         </tr>      
+         </tr>
+         <tr>
+             <th>画像</th>
+             <tr>
+                <img src="{{ asset('/strage/products/' .$product->image_name) }}" alt="アップロードした画像ファイル">
+             </tr>
+         </tr>
      </table>
  </body>
  
