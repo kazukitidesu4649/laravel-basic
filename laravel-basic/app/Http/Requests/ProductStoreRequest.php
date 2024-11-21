@@ -25,6 +25,7 @@ class ProductStoreRequest extends FormRequest
             'product_name' => 'required|max:255',
             'price' => 'required|integer|min:1',
             'vendor_code' => 'exists:vendors,vendor_code',
+            'image' => 'image|max:2048'
         ];
     }
 }
