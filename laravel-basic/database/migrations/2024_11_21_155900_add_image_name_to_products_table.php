@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('products', function (Blueprint $table) {
-            // image_nameカラムを設定する
+            // image_nameカラムを設定する stringはVARCHAR(文字列型) nullableはNULLを許可する
             $table->string('image_name')->nullable();
         });
     }
@@ -23,7 +23,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('products', function (Blueprint $table) {
-            //
+            //ロールバック時にimage_nameカラムを削除する
+            $table->dropColumn('image_name');
         });
     }
 };
