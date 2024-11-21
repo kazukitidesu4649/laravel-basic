@@ -31,9 +31,9 @@
          </tr>
          <tr>
              <th>画像</th>
-             <tr>
-                <img src="{{ asset('/strage/products/' .$product->image_name) }}" alt="アップロードした画像ファイル">
-             </tr>
+             <td>
+                <img src="{{ asset('/storage/products/' .$product->image_name) }}" alt="アップロードした画像ファイル">
+             </td>
          </tr>
      </table>
  </body>
