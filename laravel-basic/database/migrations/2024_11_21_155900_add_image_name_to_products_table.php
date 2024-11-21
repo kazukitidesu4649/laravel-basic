@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('products', function (Blueprint $table) {
-            //
+            // image_nameカラムを設定する
+            $table->string('image_name')->nullable();
         });
     }
 
